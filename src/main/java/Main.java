@@ -15,14 +15,16 @@ public class Main {
 
         Food[] food = {meat, appleRed, appleGreen};
 
+        ShoppingCart shoppingCart =new ShoppingCart(food);
+
         //общую сумму товаров без скидки,
-        System.out.println("Общая сумма товаров без скидки " + ShoppingCart.getAllSum());
+        System.out.println("Общая сумма товаров без скидки " +  shoppingCart.getAllSum());
 
-        /*//общую сумму товаров со скидкой
-        System.out.println("Общая сумма товаров со скидкой " + ShoppingCart.getAllSumDiscount(food));
+        //общую сумму товаров со скидкой
+        System.out.println("Общая сумма товаров со скидкой " + shoppingCart.getAllSumDiscount());
 
-        //сумму всех вегетарианских продуктов без скидки.
-        System.out.println("Общая сумма товаров со скидкой " + ShoppingCart.getAllSumVegetarian(food));*/
+       //сумму всех вегетарианских продуктов без скидки.
+        System.out.println("Общая сумма вегетрианских товаров без скидки " + shoppingCart.getAllSumVegetarian());
 
     }
 

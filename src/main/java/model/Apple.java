@@ -1,6 +1,7 @@
 package model;
 
-import static model.constants.Discount.DISCOUNT;
+import static model.constants.Colour.*;
+import static model.constants.Discount.*;
 
 public class Apple extends Food {
     private String color;
@@ -13,10 +14,10 @@ public class Apple extends Food {
     }
 
     public double getDiscount() {
-        if (color.equals("red")) {
+        if (color.equals(COLOR_RED)) {
             return DISCOUNT;
         } else {
-            return 0;
+            return NOT_DISCOUNT;
         }
     }
 }

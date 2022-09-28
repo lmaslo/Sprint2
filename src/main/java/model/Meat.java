@@ -1,5 +1,7 @@
 package model;
 
+import static model.constants.Discount.*;
+
 public class Meat extends Food {
     public Meat(int amount, double price) {
         this.amount = amount;
@@ -8,7 +10,7 @@ public class Meat extends Food {
     }
 
     public double getDiscount() {
-        return 0;
+        return NOT_DISCOUNT;
     }
 
 }

@@ -16,7 +16,7 @@ public class ShoppingCart {
     public double getAllSum() {
         double sum = 0;
         for (Food food : foodCart) {
-            sum = sum + food.getPrice()*food.getAmount();
+            sum = sum + food.getAmountPrice();
         }
         return sum;
     }
@@ -26,9 +26,9 @@ public class ShoppingCart {
         double sumDiscount = 0;
         for (Food food : foodCart) {
             if (food.getDiscount() == NOT_DISCOUNT) {
-                sumDiscount = sumDiscount + food.getPrice()*food.getAmount();
+                sumDiscount = sumDiscount + food.getAmountPrice();
             } else {
-                double costDiscountFood=  (food.getPrice()*food.getAmount()) - (food.getPrice()*food.getAmount() *food.getDiscount()/100);
+                double costDiscountFood=  (food.getAmountPrice()) - (food.getAmountPrice() *food.getDiscount()/100);
                 sumDiscount = sumDiscount+costDiscountFood;
             }
         }
@@ -40,7 +40,7 @@ public class ShoppingCart {
         double sumVegetarian = 0;
         for (Food food : foodCart) {
             if (food.isVegetarian()) {
-                sumVegetarian = sumVegetarian + food.getPrice()*food.getAmount();
+                sumVegetarian = sumVegetarian + food.getAmountPrice();
             }
         }
         return sumVegetarian;

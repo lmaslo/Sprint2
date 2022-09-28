@@ -14,10 +14,11 @@ public class Apple extends Food {
     }
 
     public double getDiscount() {
-        if (color.equals(COLOR_RED)) {
+        /*if (color.equals(COLOR_RED)) {
             return DISCOUNT;
         } else {
             return NOT_DISCOUNT;
-        }
+        }*/
+        return color.equals(COLOR_RED) ? DISCOUNT:NOT_DISCOUNT;
     }
 }
